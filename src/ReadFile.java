@@ -31,7 +31,7 @@ public class ReadFile {
 
     public ArrayList<ArrayList<Float>> splitarr(int fisize){
         ArrayList<ArrayList<Float>> l = new ArrayList<ArrayList<Float>> ();
-        for (int i = 0; i < list.size()-fisize-1; i++){
+        for (int i = 0; i < list.size()-fisize+1; i++){
             ArrayList<Float> n = new ArrayList<>();
             for (int j = 0; j < fisize; j++){
                 n.add(list.get(i+j));
@@ -46,6 +46,9 @@ public class ReadFile {
         array();
         ArrayList<ArrayList<Float>> l = splitarr(flsize);
         return l;
+    }
+    public ArrayList<Float> getList(){
+        return list;
     }
 
     public Float median(ArrayList<Float> l){
